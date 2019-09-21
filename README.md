@@ -9,7 +9,11 @@ EasyPermissions is installed by adding the following dependency to your `build.g
 
 ```groovy
 dependencies {
-    implementation 'pub.devrel:easypermissions:2.0.0'
+    // For developers using AndroidX in their applications
+    implementation 'pub.devrel:easypermissions:3.0.0'
+ 
+    // For developers using the Android Support Library
+    implementation 'pub.devrel:easypermissions:2.0.1'
 }
 ```
 
@@ -161,7 +165,7 @@ Implement the `EasyPermissions.RationaleCallbacks` if you want to interact with 
 ```java
 @Override
 public void onRationaleAccepted(int requestCode) {
-    // Rationale accpets to request some permissions
+    // Rationale accepted to request some permissions
     // ...
 }
 

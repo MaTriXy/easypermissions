@@ -1,31 +1,23 @@
 package pub.devrel.easypermissions.testhelper;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
-import pub.devrel.easypermissions.R;
 
-public class TestFragment extends Fragment
+public class TestSupportFragmentActivity extends FragmentActivity
         implements EasyPermissions.PermissionCallbacks, EasyPermissions.RationaleCallbacks {
 
-    public static final int REQUEST_CODE = 4;
+    public static final int REQUEST_CODE = 5;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        getContext().getTheme().applyStyle(R.style.Theme_AppCompat, true);
-        return super.onCreateView(inflater, container, savedInstanceState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
     }
 
     @Override
